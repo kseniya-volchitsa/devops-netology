@@ -10,3 +10,7 @@
 - файлы логов crash.log;
 - файлы переменных *.tfvars (могут содержать секреты);
 - файлы override.tf и конфигурации CLI (.terraformrc, terraform.rc).
+
+## PyCharm
+
+Этот коммит сделан через визуальный редактор PyCharm.
