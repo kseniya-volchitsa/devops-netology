@@ -56,7 +56,7 @@ git commit -m 'First commit'
 
 11. Проверены выводы `git status`, `git diff`, `git diff --staged`.
 
-**Скриншоты:**
+**Скриншот:**
 
 ![First commit](img/01-first-commit.png)
 
@@ -88,9 +88,9 @@ git commit -m 'Added gitignore'
 - `override.tf`, `override.tf.json` — временные override-файлы.
 - `.terraformrc`, `terraform.rc` — конфиги CLI.
 
-**Скриншоты:**
+**Скриншот:**
 
-![Added gitignore](img/02-added-gitignore.png)
+![Содержимое .gitignore](img/02-gitignore-content.png)
 
 ---
 
@@ -128,27 +128,51 @@ git mv will_be_moved.txt has_been_moved.txt
 git commit -m 'Moved and deleted'
 ```
 
-**Скриншоты:**
+**Скриншот:**
 
-![Moved and deleted](img/03-moved-deleted.png)
+![Удаление и перемещение файлов](img/03-has-been-moved.png)
 
 ---
 
 ### Проверка изменения
 
-**Реальный вывод `git log --oneline`:**
+**Обязательные 5 коммитов:**
+
+```bash
+git log --oneline | grep -E "Initial commit|First commit|Added gitignore|Prepare to delete|Moved and deleted"
+```
+
+**Вывод:**
+
+```
+83bdb67 Moved and deleted
+864dfe0 Prepare to delete and move
+7b9de58 Added gitignore
+7820769 First commit
+f028d2c Initial commit
+```
+
+**Скриншот с 5 обязательными коммитами:**
+
+![5 обязательных коммитов](img/06-git-log-5-commits.png)
+
+**Полная история коммитов:**
+
+```bash
+git log --oneline
+```
 
 ```
 f028d2c Initial commit
 7820769 First commit
 7b9de58 Added gitignore
 864dfe0 Prepare to delete and move
-83bdb67 (tag: v0.1, tag: v0.0) Moved and deleted
+83bdb67 Moved and deleted
 1425e96 Commit from PyCharm #1
 ddd539f Commit from PyCharm #2
 6b8cd47 Ignore .idea directory
 081743f Organize homework: split into 02-git-01-vcs and 02-git-02-base
-b75656f (HEAD -> main, origin/main, gitlab/main) Remove Bitbucket from 02-git-02-base README
+b75656f Remove Bitbucket from 02-git-02-base README
 ```
 
 **Пояснение коммитов:**
@@ -159,16 +183,16 @@ b75656f (HEAD -> main, origin/main, gitlab/main) Remove Bitbucket from 02-git-02
 | `7820769` | First commit | Изменён `README.md` |
 | `7b9de58` | Added gitignore | Добавлены `.gitignore` и `terraform/.gitignore` |
 | `864dfe0` | Prepare to delete and move | Созданы `will_be_deleted.txt` и `will_be_moved.txt` |
-| `83bdb67` | Moved and deleted | Удалён `will_be_deleted.txt`, переименован `will_be_moved.txt` → `has_been_moved.txt`. Помечен тегами `v0.0` и `v0.1` |
-| `1425e96` | Commit from PyCharm #1 | Коммит через IDE (Задание 4 из ДЗ «Основы Git») |
+| `83bdb67` | Moved and deleted | Удалён `will_be_deleted.txt`, переименован `will_be_moved.txt` → `has_been_moved.txt` |
+| `1425e96` | Commit from PyCharm #1 | Коммит через IDE |
 | `ddd539f` | Commit from PyCharm #2 | Коммит через IDE |
 | `6b8cd47` | Ignore .idea directory | Добавлен `.idea/` в `.gitignore` |
 | `081743f` | Organize homework | Разделение на папки `02-git-01-vcs` и `02-git-02-base` |
 | `b75656f` | Remove Bitbucket | Убран Bitbucket из README второго ДЗ |
 
-**Скриншоты:**
+**Скриншот с полной историей:**
 
-![Git log](img/04-git-log.png)
+![Полная история коммитов](img/04-git-log.png)
 
 ---
 
@@ -176,10 +200,9 @@ b75656f (HEAD -> main, origin/main, gitlab/main) Remove Bitbucket from 02-git-02
 
 ```bash
 git push origin main
-git push gitlab main
 ```
 
-**Скриншоты:**
+**Скриншот:**
 
 ![Git push](img/05-git-push.png)
 
@@ -190,11 +213,10 @@ git push gitlab main
 В результате выполнения задания:
 
 - ✅ Создан и настроен локальный репозиторий.
-- ✅ Создан удалённый репозиторий на GitHub и GitLab.
-- ✅ Выполнено 10 коммитов (5 обязательных + 5 дополнительных).
+- ✅ Создан удалённый репозиторий на GitHub.
+- ✅ Выполнено 5+ коммитов.
 - ✅ Настроены `.gitignore` для Terraform.
 - ✅ Освоены `git add`, `git commit`, `git diff`, `git status`, `git rm`, `git mv`, `git push`.
-- ✅ Созданы теги `v0.0` и `v0.1`.
 
 ---
 
