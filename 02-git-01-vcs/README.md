@@ -28,8 +28,8 @@ cd devops-netology
 5. Настроен Git:
 
 ```bash
-git config --global user.name "Ксения Волчица"
-git config --global user.email "kseniya@example.com"
+git config --global user.name "kseniya-volchitsa"
+git config --global user.email "kkseniya-volchitsa@gmail.com"
 ```
 
 6. Выполнена команда `git status` — файл `README.md` в состоянии **Unmodified**.
