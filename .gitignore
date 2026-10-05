@@ -1,25 +1,36 @@
 # IDE settings
+# Игнорируются все файлы и подкаталоги внутри любого каталога .idea
 .idea/
 
 # Local .terraform directories
+# Игнорируются все файлы внутри любого каталога .terraform на любом уровне вложенности
 **/.terraform/*
 
 # .tfstate files
+# Игнорируются все файлы, имя которых заканчивается на .tfstate
 *.tfstate
+# Игнорируются все файлы, имя которых содержит .tfstate. (например, .tfstate.backup)
 *.tfstate.*
 
 # Crash log files
+# Игнорируется файл с точным именем crash.log
 crash.log
+# Игнорируются все файлы, имя которых начинается на crash. и заканчивается на .log
 crash.*.log
 
 # Exclude all .tfvars files, which are likely to contain sensitive data
+# Игнорируются все файлы, имя которых заканчивается на .tfvars
 *.tfvars
+# Игнорируются все файлы, имя которых заканчивается на .tfvars.json
 *.tfvars.json
 
 # Ignore override files as they are usually used to override resources locally
+# Игнорируются файлы с точными именами override.tf и override.tf.json
 override.tf
 override.tf.json
+# Игнорируются все файлы, имя которых заканчивается на _override.tf
 *_override.tf
+# Игнорируются все файлы, имя которых заканчивается на _override.tf.json
 *_override.tf.json
 
 # Include override files you do wish to add to version control using negated pattern
@@ -29,5 +40,6 @@ override.tf.json
 # example: *tfplan*
 
 # Ignore CLI configuration files
+# Игнорируются файлы с точными именами .terraformrc и terraform.rc
 .terraformrc
 terraform.rc
