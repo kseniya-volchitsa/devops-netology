@@ -29,7 +29,7 @@ cd devops-netology
 
 ```bash
 git config --global user.name "kseniya-volchitsa"
-git config --global user.email "kkseniya-volchitsa@gmail.com"
+git config --global user.email "vol4ica13131313@gmail.com"
 ```
 
 6. Выполнена команда `git status` — файл `README.md` в состоянии **Unmodified**.
@@ -136,21 +136,35 @@ git commit -m 'Moved and deleted'
 
 ### Проверка изменения
 
-**Вывод `git log`:**
-
-```bash
-git log --oneline
-```
-
-**Ожидаемый результат:**
+**Реальный вывод `git log --oneline`:**
 
 ```
-xxxxxxx (HEAD -> main, origin/main) Moved and deleted
-xxxxxxx Prepare to delete and move
-xxxxxxx Added gitignore
-xxxxxxx First commit
-xxxxxxx Initial commit
+f028d2c Initial commit
+7820769 First commit
+7b9de58 Added gitignore
+864dfe0 Prepare to delete and move
+83bdb67 (tag: v0.1, tag: v0.0) Moved and deleted
+1425e96 Commit from PyCharm #1
+ddd539f Commit from PyCharm #2
+6b8cd47 Ignore .idea directory
+081743f Organize homework: split into 02-git-01-vcs and 02-git-02-base
+b75656f (HEAD -> main, origin/main, gitlab/main) Remove Bitbucket from 02-git-02-base README
 ```
+
+**Пояснение коммитов:**
+
+| Хеш | Комментарий | Что сделано |
+|-----|-------------|-------------|
+| `f028d2c` | Initial commit | Создан GitHub при инициализации репозитория |
+| `7820769` | First commit | Изменён `README.md` |
+| `7b9de58` | Added gitignore | Добавлены `.gitignore` и `terraform/.gitignore` |
+| `864dfe0` | Prepare to delete and move | Созданы `will_be_deleted.txt` и `will_be_moved.txt` |
+| `83bdb67` | Moved and deleted | Удалён `will_be_deleted.txt`, переименован `will_be_moved.txt` → `has_been_moved.txt`. Помечен тегами `v0.0` и `v0.1` |
+| `1425e96` | Commit from PyCharm #1 | Коммит через IDE (Задание 4 из ДЗ «Основы Git») |
+| `ddd539f` | Commit from PyCharm #2 | Коммит через IDE |
+| `6b8cd47` | Ignore .idea directory | Добавлен `.idea/` в `.gitignore` |
+| `081743f` | Organize homework | Разделение на папки `02-git-01-vcs` и `02-git-02-base` |
+| `b75656f` | Remove Bitbucket | Убран Bitbucket из README второго ДЗ |
 
 **Скриншоты:**
 
@@ -162,7 +176,12 @@ xxxxxxx Initial commit
 
 ```bash
 git push origin main
+git push gitlab main
 ```
+
+**Скриншоты:**
+
+![Git push](img/05-git-push.png)
 
 ---
 
@@ -171,10 +190,11 @@ git push origin main
 В результате выполнения задания:
 
 - ✅ Создан и настроен локальный репозиторий.
-- ✅ Создан удалённый репозиторий на GitHub.
-- ✅ Выполнено 5+ коммитов.
+- ✅ Создан удалённый репозиторий на GitHub и GitLab.
+- ✅ Выполнено 10 коммитов (5 обязательных + 5 дополнительных).
 - ✅ Настроены `.gitignore` для Terraform.
 - ✅ Освоены `git add`, `git commit`, `git diff`, `git status`, `git rm`, `git mv`, `git push`.
+- ✅ Созданы теги `v0.0` и `v0.1`.
 
 ---
 
