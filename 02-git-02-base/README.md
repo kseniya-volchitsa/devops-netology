@@ -20,14 +20,14 @@
 3. Добавлен GitLab как дополнительный remote:
 
 ```bash
-git remote add gitlab https://gitlab.com/YOUR_LOGIN/devops-netology.git
+git remote add gitlab https://gitlab.com/vol4ica13131313/devops-netology.git
 ```
 
 4. Проверен вывод `git remote -v`:
 
 ```
-gitlab	https://gitlab.com/YOUR_LOGIN/devops-netology.git (fetch)
-gitlab	https://gitlab.com/YOUR_LOGIN/devops-netology.git (push)
+gitlab	https://gitlab.com/vol4ica13131313/devops-netology.git (fetch)
+gitlab	https://gitlab.com/vol4ica13131313/devops-netology.git (push)
 origin	https://github.com/kseniya-volchitsa/devops-netology.git (fetch)
 origin	https://github.com/kseniya-volchitsa/devops-netology.git (push)
 ```
@@ -42,7 +42,7 @@ git push -u gitlab main
 
 **Скриншоты:**
 
-![GitLab remote](img/screen1_2.png)
+![GitLab remote](img/01-gitlab-remote.png)
 
 ---
 
@@ -72,11 +72,11 @@ git push gitlab v0.1
 Проверить теги можно на страницах:
 
 - GitHub: `https://github.com/kseniya-volchitsa/devops-netology/releases`
-- GitLab: `https://gitlab.com/YOUR_LOGIN/devops-netology/-/tags`
+- GitLab: `https://gitlab.com/vol4ica13131313/devops-netology/-/tags`
 
 **Скриншоты:**
 
-![Теги](img/screen3_5.png)
+![Теги](img/02-tags-and-branches.png)
 
 ---
 
@@ -128,7 +128,7 @@ git push origin fix
 
 **Скриншоты:**
 
-![Ветка fix](img/screen3_5.png)
+![Ветка fix](img/02-tags-and-branches.png)
 
 ---
 
@@ -137,12 +137,19 @@ git push origin fix
 ### Работа с Git через PyCharm
 
 1. Открыт PyCharm → **View → Tool Windows → Git**.
-2. Изменён файл — он появился на вкладке **Local Changes**.
-3. Сделаны 2 коммита через интерфейс IDE (кнопка **Commit** внизу диалога).
+2. Изменены файлы — они появились на вкладке **Local Changes**:
+   - `.gitignore`
+   - `README.md`
+   - `screen1_2.png`
+   - `screen3_5.png`
+3. Введён комментарий `Commit from PyCharm #2` и нажата кнопка **Commit**.
+4. Проверена история коммитов через вкладку **Git → Log** — видны коммиты:
+   - `Commit from PyCharm #1` (01.10.2026, 22:00)
+   - `Commit from PyCharm #2` (01.10.2026, 22:02)
 
-**Скриншоты:**
+**Скриншот:**
 
-![PyCharm Git](img/screen1_2.png)
+![Работа с Git в PyCharm](img/03-pycharm-git.png)
 
 ---
 
