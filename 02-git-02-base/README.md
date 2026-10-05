@@ -120,7 +120,7 @@ git push -u origin fix
 
 ```bash
 git add README.md
-git commit -m "Fix in branch"
+git commit -m "Update README in fix branch"
 git push origin fix
 ```
 
@@ -128,11 +128,13 @@ git push origin fix
 
 **Скриншоты:**
 
-![Ветка fix](img/02-tags-and-branches.png)
+![Ветки main и fix на GitHub](img/02-branches.png)
+
+![Network graph с веткой fix](img/02-network.png)
 
 ---
 
-## Задание 4. Упрощаем себе жизнь
+Задание 4. Упрощаем себе жизнь
 
 ### Работа с Git через PyCharm
 
