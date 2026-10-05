@@ -7,13 +7,13 @@
 ## Цель задания
 
 - Научиться работать с Git как с распределённой системой контроля версий.
-- Настроить репозиторий для работы в GitHub, GitLab и Bitbucket.
+- Настроить репозиторий для работы в GitHub и GitLab.
 - Попрактиковаться работать с тегами.
 - Поработать с Git при помощи визуального редактора.
 
 ---
 
-## Задание 1. Знакомимся с GitLab и Bitbucket
+## Задание 1. Знакомимся с GitLab
 
 1. Создан аккаунт в GitLab.
 2. Создан новый проект `devops-netology` (visibility level: **Public**, без README).
@@ -38,28 +38,11 @@ origin	https://github.com/kseniya-volchitsa/devops-netology.git (push)
 git push -u gitlab main
 ```
 
+6. Проверено, что история коммитов в GitHub и GitLab совпадает.
+
 **Скриншоты:**
 
 ![GitLab remote](img/screen1_2.png)
-
----
-
-### Bitbucket (задание со звёздочкой)
-
-1. Создан аккаунт и проект `netology` в Bitbucket.
-2. Создан репозиторий `devops-netology` (Public, без README).
-3. Добавлен Bitbucket как remote:
-
-```bash
-git remote add bitbucket https://bitbucket.org/YOUR_LOGIN/devops-netology.git
-git push -u bitbucket main
-```
-
-4. Проверен вывод `git remote -v` — три remote: `origin`, `gitlab`, `bitbucket`.
-
-**Скриншоты:**
-
-![Bitbucket remote](img/screen3_5.png)
 
 ---
 
@@ -71,7 +54,6 @@ git push -u bitbucket main
 git tag v0.0
 git push origin v0.0
 git push gitlab v0.0
-git push bitbucket v0.0
 ```
 
 ### Аннотированный тег v0.1
@@ -80,7 +62,6 @@ git push bitbucket v0.0
 git tag -a v0.1 -m "Release v0.1"
 git push origin v0.1
 git push gitlab v0.1
-git push bitbucket v0.1
 ```
 
 ### Разница между тегами
@@ -90,9 +71,8 @@ git push bitbucket v0.1
 
 Проверить теги можно на страницах:
 
-- GitHub: `https://github.com/YOUR_ACCOUNT/devops-netology/releases`
-- GitLab: `https://gitlab.com/YOUR_ACCOUNT/devops-netology/-/tags`
-- Bitbucket: в выпадающем меню веток на вкладке Tags.
+- GitHub: `https://github.com/kseniya-volchitsa/devops-netology/releases`
+- GitLab: `https://gitlab.com/YOUR_LOGIN/devops-netology/-/tags`
 
 **Скриншоты:**
 
@@ -170,7 +150,7 @@ git push origin fix
 
 В результате выполнения задания:
 
-- ✅ Настроены три remote (GitHub, GitLab, Bitbucket).
+- ✅ Настроены два remote (GitHub, GitLab).
 - ✅ Созданы лёгкий и аннотированный теги.
 - ✅ Создана ветка `fix` от старого коммита.
 - ✅ Выполнены коммиты через PyCharm.
