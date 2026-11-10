@@ -370,6 +370,9 @@ Updating 6158b76..45893d1
 Fast-forward
 ```
 
+**Результат:** merge-коммит `Merge branch 'git-rebase'`.
+
+
 **Скриншот:**
 
 ![Fast-forward merge](img/11-fast-forward-merge.png)
