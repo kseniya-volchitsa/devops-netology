@@ -37,9 +37,6 @@ packer validate mydebian.json.pkr.hcl
 # The configuration is valid.
 ```
 
-# Правила приема
-
-Домашнее задание выполнено в файле readme.md в GitHub-репозитории. Ссылка на репозиторий: https://github.com/kseniya-volchitsa/devops-netology Ссылка на GitLab: https://gitlab.com/vol4ica13131313/devops-netology
 Запуск сборки:
 ```bash
 packer build mydebian.json.pkr.hcl
@@ -96,3 +93,8 @@ ssh yc-user@51.250.80.8 'sudo docker run hello-world'
 
 С помощью Packer воспроизведён процесс сборки кастомного образа: одна команда создаёт временные сеть, подсеть, диск и ВМ, выполняет provisioner-скрипт и превращает диск в готовый образ. Из образа развёрнута ВМ, на которой подтверждена работа Docker, htop и tmux.
 
+# Правила приема
+
+Домашнее задание выполнено в файле readme.md в GitHub- и GitLab-репозиториях. 
+Ссылка на GitHub: https://github.com/kseniya-volchitsa/devops-netology 
+Ссылка на GitLab: https://gitlab.com/vol4ica13131313/devops-netology
