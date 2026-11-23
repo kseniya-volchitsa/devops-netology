@@ -43,3 +43,27 @@ override.tf.json
 # Игнорируются файлы с точными именами .terraformrc и terraform.rc
 .terraformrc
 terraform.rc
+
+# --- Архивы и сжатые файлы (чтобы не тянулись .zip, .tar.gz и т.п.) ---
+*.zip
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# --- Временные файлы текстовых редакторов (Vim, Emacs и др.) ---
+.swp
+.swo
+*~
+
+# --- Секреты, ключи и переменные окружения (НИКОГДА не коммитим!) ---
+*.key
+*.pem
+.env
+*.tfvars
+
+# --- Директории сборки и артефакты (Maven, Gradle, Go и т.д.) ---
+target/
+build/
+dist/
+vendor/
